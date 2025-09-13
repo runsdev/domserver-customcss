@@ -1,0 +1,814 @@
+/* DOMjudge iOS Glassy Light Style Override */
+/* Complete override maintaining all width/height ratios with Geist font */
+
+/* Import Geist fonts */
+@font-face {
+    font-family: 'Geist';
+    src: url('Geist-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Geist Mono';
+    src: url('GeistMono-VariableFont_wght.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    /* iOS Light Color Palette */
+    --ios-bg-primary: #ffffff;
+    --ios-bg-secondary: #f6f8fa;
+    --ios-bg-tertiary: #f0f3f6;
+    --ios-border: rgba(142, 142, 147, 0.12);
+    --ios-border-medium: rgba(142, 142, 147, 0.2);
+    --ios-border-strong: rgba(142, 142, 147, 0.36);
+    --ios-text-primary: #1d1d1f;
+    --ios-text-secondary: #86868b;
+    --ios-text-tertiary: #6e6e73;
+    --ios-accent: #007aff;
+    --ios-success: #30d158;
+    --ios-warning: #ff9f0a;
+    --ios-danger: #ff3b30;
+    --ios-info: #5ac8fa;
+    
+    /* Glass effect variables */
+    --glass-bg: rgba(255, 255, 255, 0.8);
+    --glass-bg-secondary: rgba(246, 248, 250, 0.85);
+    --glass-bg-tertiary: rgba(255, 255, 255, 0.6);
+    --glass-border: rgba(142, 142, 147, 0.15);
+    --glass-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    --glass-shadow-hover: 0 12px 48px rgba(0, 0, 0, 0.15);
+    --glass-shadow-sm: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --glass-blur: blur(20px);
+    --glass-blur-sm: blur(10px);
+    
+    /* iOS radius system */
+    --ios-radius-xs: 4px;
+    --ios-radius-sm: 6px;
+    --ios-radius: 8px;
+    --ios-radius-md: 10px;
+    --ios-radius-lg: 12px;
+    --ios-radius-xl: 16px;
+    --ios-radius-2xl: 20px;
+    
+    /* Override DOMjudge variables */
+    --background-color: var(--ios-bg-primary);
+    --text-color: var(--ios-text-primary);
+}
+
+/* Global font override */
+* {
+    font-family: 'Geist', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif !important;
+}
+
+/* Monospace font override */
+pre, code, kbd, samp, tt, .teamid, .filename, .hostname, .size, .md5, .execid,
+input[type="text"], textarea, .form-control, .form-select {
+    font-family: 'Geist Mono', 'SF Mono', ui-monospace, Menlo, Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace !important;
+}
+
+.fas, .fa-solid, .fa, .fab, .fa-brands, .far, .fa-regular {
+    font-family: "Font Awesome 6 Free", "Font Awesome 5 Free", "FontAwesome", "Font Awesome 5 Brands", "Font Awesome 6 Brands", Arial, sans-serif !important;
+    font-weight: 900 !important;
+}
+
+/* Body styling with maintained padding */
+body {
+    background: linear-gradient(135deg, #f6f8fa 0%, #ffffff 30%, #f0f3f6 70%, #e8eaed 100%) !important;
+    background-attachment: fixed !important;
+    color: var(--ios-text-primary) !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* Maintain original paddings */
+    padding-bottom: 4em !important;
+    padding-top: 4.5rem !important;
+}
+
+body.static {
+    padding-top: 1rem !important; /* Preserve static padding */
+}
+
+/* Logo - maintain exact dimensions */
+#djlogo {
+    width: 93px !important; 
+    height: 196px !important;
+    position: absolute !important;
+    right: 1ex !important;
+}
+
+/* Container styling with glass effect */
+.container, .container-fluid, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius-xl) !important;
+    box-shadow: var(--glass-shadow) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+/* Cards with glass effect */
+.card {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius-lg) !important;
+    box-shadow: var(--glass-shadow) !important;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    margin: 1rem  !important;
+}
+
+.card:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: var(--glass-shadow-hover) !important;
+}
+
+.card-header {
+    background: var(--glass-bg-secondary) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    color: var(--ios-text-primary) !important;
+    font-weight: 600 !important;
+    border-radius: var(--ios-radius-lg) var(--ios-radius-lg) 0 0 !important;
+}
+
+.card-body {
+    color: var(--ios-text-primary) !important;
+}
+
+.card-footer {
+    background: var(--glass-bg-secondary) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border-top: 1px solid var(--glass-border) !important;
+    border-radius: 0 0 var(--ios-radius-lg) var(--ios-radius-lg) !important;
+}
+
+/* Navigation styling */
+.navbar {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border-bottom: 1px solid var(--glass-border) !important;
+    box-shadow: var(--glass-shadow-sm) !important;
+}
+
+.navbar-brand, .navbar-nav .nav-link {
+    color: var(--ios-text-primary) !important;
+    font-weight: 500 !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    color: var(--ios-accent) !important;
+    transform: translateY(-1px) !important;
+}
+
+/* Menu item constraint preserved */
+#menuDefault ul li.nav-item {
+    white-space: nowrap !important;
+}
+
+/* Tables with glass effect - maintaining all dimensions */
+.table, table {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border-radius: var(--ios-radius-lg) !important;
+    overflow: hidden !important;
+    box-shadow: var(--glass-shadow) !important;
+    border: 1px solid var(--glass-border) !important;
+}
+
+.table thead th, table thead th {
+    background: var(--glass-bg-secondary) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border-bottom: 2px solid var(--ios-accent) !important;
+    color: var(--ios-text-primary) !important;
+    font-weight: 600 !important;
+}
+
+.table tbody tr, table tbody tr {
+    background: var(--glass-bg-tertiary) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.table tbody tr:hover, table tbody tr:hover {
+    background: var(--glass-bg-secondary) !important;
+    transform: translateX(2px) !important;
+}
+
+.table td, .table th, table td, table th {
+    border-color: var(--glass-border) !important;
+    color: var(--ios-text-primary) !important;
+    vertical-align: middle !important;
+}
+
+/* Scoreboard - maintaining all original dimensions and behaviors */
+.scoreboard {
+    border-collapse: collapse !important;
+    clear: both !important;
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border-radius: var(--ios-radius-xl) !important;
+    overflow: hidden !important;
+    box-shadow: var(--glass-shadow) !important;
+    border: 1px solid var(--glass-border) !important;
+}
+
+.scoreboard td {
+    font-size: small !important; /* Maintain original size */
+    vertical-align: middle !important;
+    text-align: center !important;
+}
+
+.scoreboard td div {
+    width: 4em !important; /* Maintain original width */
+    font-size: 120% !important; /* Maintain original size */
+    display: inline-block !important;
+}
+
+.scoreboard td div span {
+    font-weight: normal !important;
+    font-size: 70% !important; /* Maintain original size */
+    display: block !important;
+}
+
+.scoreboard tr {
+    border-bottom: 1px solid var(--glass-border) !important;
+    height: 42px !important; /* Maintain original height */
+}
+
+.scoreboard td.score_cell {
+    min-width: 4.2em !important; /* Maintain original width */
+    border-right: none !important;
+}
+
+.scoreheader th {
+    background: var(--glass-bg-secondary) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 1 !important;
+    box-shadow: -1px 0 0 0 var(--glass-border) inset, 0 2px 0 0 var(--ios-accent) !important;
+}
+
+/* Score colors with iOS style */
+.score_correct  {
+    background: #a0ffb6 !important;
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600 !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.score_incorrect {
+    background: #ffa69e !important;
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600 !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.score_pending {
+    background: #eaa5ff !important;
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600 !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+.score_first {
+    background: #e9ff6b !important;
+    color: rgb(0, 0, 0) !important;
+    font-weight: 600 !important;
+    animation: ios-glow 2s ease-in-out infinite alternate !important;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+}
+
+@keyframes ios-glow {
+    from { 
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 0 0 rgba(255, 159, 10, 0.7);
+    }
+    to { 
+        box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 0 0 8px rgba(255, 159, 10, 0);
+    }
+}
+
+/* Maintain specific widths */
+#scoresolv, #scoretotal { width: 2.5em !important; }
+.scorenc, .scorett, .scorepl { 
+    text-align: center !important; 
+    width: 2ex !important; 
+}
+.scoreprob { 
+    width: 3.0em !important; 
+    vertical-align: middle !important; 
+}
+
+/* Buttons with iOS styling */
+.btn {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius) !important;
+    color: var(--ios-text-primary) !important;
+    font-weight: 500 !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    position: relative !important;
+    overflow: hidden !important;
+}
+
+.btn::before {
+    content: '' !important;
+    position: absolute !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent) !important;
+    transition: left 0.5s !important;
+}
+
+.btn:hover::before {
+    left: 100% !important;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, var(--ios-accent), #4d9eff) !important;
+    border: 1px solid var(--ios-accent) !important;
+    color: white !important;
+    box-shadow: 0 4px 16px rgba(0, 122, 255, 0.25) !important;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: 0 6px 24px rgba(0, 122, 255, 0.35) !important;
+}
+
+.btn-success {
+    background: linear-gradient(135deg, var(--ios-success), #5de269) !important;
+    border: 1px solid var(--ios-success) !important;
+    color: rgb(0, 0, 0) !important;
+    box-shadow: 0 4px 16px rgba(48, 209, 88, 0.25) !important;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, var(--ios-danger), #ff5545) !important;
+    border: 1px solid var(--ios-danger) !important;
+    color: white !important;
+    box-shadow: 0 4px 16px rgba(255, 59, 48, 0.25) !important;
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, var(--ios-warning), #ffb340) !important;
+    border: 1px solid var(--ios-warning) !important;
+    color: white !important;
+    box-shadow: 0 4px 16px rgba(255, 159, 10, 0.25) !important;
+}
+
+.btn-info {
+    background: linear-gradient(135deg, var(--ios-info), #70d0ff) !important;
+    border: 1px solid var(--ios-info) !important;
+    color: white !important;
+    box-shadow: 0 4px 16px rgba(90, 200, 250, 0.25) !important;
+}
+
+/* Small buttons - maintain original sizing */
+.btn-xs, .btn-group-xs > .btn {
+    padding: 1px 5px !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    border-radius: 3px !important;
+}
+
+.btn-group > .btn:not(:last-child) {
+    margin-right: 0.5rem !important;
+}
+.btn-group {
+    gap: 0.5rem !important;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem !important;
+    font-size: 0.875rem !important;
+    border-radius: var(--ios-radius-sm) !important;
+}
+
+/* Form controls */
+.form-control, .form-select, input, textarea, select {
+    background: rgba(255, 255, 255, 0.9) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border: 1px solid var(--ios-border-medium) !important;
+    border-radius: var(--ios-radius) !important;
+    color: var(--ios-text-primary) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.form-control:focus, .form-select:focus, input:focus, textarea:focus, select:focus {
+    background: rgba(255, 255, 255, 1) !important;
+    border-color: var(--ios-accent) !important;
+    box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1) !important;
+    outline: none !important;
+}
+
+/* Maintain specific form widths */
+.config_input { width: 9em !important; }
+.submitform { max-width: 450px !important; }
+.clarificationform { max-width: 800px !important; }
+
+/* Alerts with glass effect */
+.alert {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius-lg) !important;
+    color: var(--ios-text-primary) !important;
+}
+
+.alert-success {
+    background: rgba(48, 209, 88, 0.1) !important;
+    border-color: rgba(48, 209, 88, 0.3) !important;
+    color: #1d6b3a !important;
+}
+
+.alert-danger {
+    background: rgba(255, 59, 48, 0.1) !important;
+    border-color: rgba(255, 59, 48, 0.3) !important;
+    color: #c5221a !important;
+}
+
+.alert-warning {
+    background: rgba(255, 159, 10, 0.1) !important;
+    border-color: rgba(255, 159, 10, 0.3) !important;
+    color: #b8760a !important;
+}
+
+.alert-info {
+    background: rgba(90, 200, 250, 0.1) !important;
+    border-color: rgba(90, 200, 250, 0.3) !important;
+    color: #0c7db8 !important;
+}
+
+/* Badges with iOS styling */
+.badge {
+    /* background: var(--glass-bg) !important; */
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius-md) !important;
+    /* color: var(--ios-text-primary) !important; */
+    font-weight: 500 !important;
+}
+
+/* Maintain badge testcase dimensions */
+.badge-testcase {
+    width: 20px !important;
+    margin-right: 1px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Problem badge dimensions */
+.problem-badge {
+    --badge-padding-x: 0.5em !important;
+    font-size: 1em !important;
+    min-width: 2em !important;
+}
+
+/* Code and pre blocks */
+pre, code, kbd, samp {
+    background: var(--glass-bg-secondary) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius) !important;
+    color: var(--ios-text-primary) !important;
+}
+
+.output_text {
+    background: var(--glass-bg-secondary) !important;
+    backdrop-filter: var(--glass-blur-sm) !important;
+    -webkit-backdrop-filter: var(--glass-blur-sm) !important;
+    border: 1px solid var(--ios-accent) !important;
+    border-radius: var(--ios-radius) !important;
+    color: var(--ios-text-primary) !important;
+    /* Maintain original styling */
+    margin: 0 !important;
+    padding: 5px !important;
+    white-space: pre !important;
+}
+
+/* Modal dialogs */
+.modal-content {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius-xl) !important;
+    box-shadow: var(--glass-shadow-hover) !important;
+}
+
+/* Dropdowns */
+.dropdown-menu {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius-lg) !important;
+    box-shadow: var(--glass-shadow-hover) !important;
+}
+
+.dropdown-item {
+    color: var(--ios-text-primary) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.dropdown-item:hover {
+    background: var(--glass-bg-secondary) !important;
+    color: var(--ios-accent) !important;
+}
+
+/* Links */
+a {
+    color: var(--ios-accent) !important;
+    text-decoration: none !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+a:hover {
+    color: #0051d2 !important;
+    text-decoration: underline !important;
+}
+
+/* Preserve collapse link styling */
+a.collapse, a.collapse-link {
+    color: var(--ios-text-primary) !important;
+    text-decoration: none !important;
+}
+
+/* Problem-specific colors with iOS variants */
+.sol_correct, .compile-successful {
+    color: var(--ios-success) !important;
+    font-weight: 600 !important;
+}
+
+.sol_incorrect, .compile-unsuccessful {
+    color: var(--ios-danger) !important;
+    font-weight: 600 !important;
+}
+
+.sol_queued {
+    color: var(--ios-text-secondary) !important;
+}
+
+/* Maintain original font variants */
+.probid, .langid { 
+    font-variant: small-caps !important; 
+}
+
+.sol {
+    font-weight: bold !important;
+    font-variant: small-caps !important;
+}
+
+/* Highlight colors */
+.highlight { 
+    background: linear-gradient(135deg, var(--ios-warning), #ffcc70) !important;
+    color: var(--ios-text-primary) !important;
+    border-radius: var(--ios-radius-sm) !important;
+    padding: 0.1rem 0.3rem !important;
+}
+
+.highlight.roweven, .highlight.even { 
+    background: linear-gradient(135deg, var(--ios-warning), #ffcc70) !important; 
+}
+
+.highlight.rowodd, .highlight.odd { 
+    background: linear-gradient(135deg, #ffd966, var(--ios-warning)) !important; 
+}
+
+/* Maintain specific table layouts */
+.table-full-clickable-cell {
+    border-collapse: separate !important;
+    border-spacing: 0px 0px !important;
+}
+
+.table-full-clickable-cell tbody td:not(.testcase-results) {
+    padding: 0 !important;
+}
+
+.table-full-clickable-cell tbody td:not(.testcase-results) a {
+    width: 100% !important;
+    height: 100% !important;
+    padding: 1px .25rem !important;
+    display: block !important;
+}
+
+/* Test case styling - maintain dimensions */
+.tc_box_small {
+    text-align: center !important;
+    font-size: 65% !important;
+    width: 1.0em !important;
+    display: inline-block !important;
+    padding: 1px !important;
+    margin: 1px !important;
+    color: var(--ios-text-primary) !important;
+    background: var(--glass-bg) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: 2px !important;
+}
+
+.tc_list_small {
+    max-width: 500px !important;
+}
+
+/* Maintain test sample and description widths */
+.testsample {
+    text-align: center !important;
+    max-width: 200px !important;
+}
+
+.testdesc {
+    max-width: 400px !important;
+}
+
+/* Submission layout width */
+#submission_layout { 
+    width: 100% !important; 
+}
+
+/* Timer button width */
+.timebutton {
+    min-width: 9em !important;
+}
+
+/* Filter box styling */
+.filterbox {
+    background: var(--glass-bg) !important;
+    backdrop-filter: var(--glass-blur) !important;
+    -webkit-backdrop-filter: var(--glass-blur) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius-lg) !important;
+    padding: 1rem !important;
+    margin: 1rem !important;
+}
+
+/* Country flag dimensions */
+.countryflag {
+    height: 1.5rem !important;
+    width: 2rem !important;
+    border-radius: .375rem !important;
+    margin: .125rem !important;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, .1) !important;
+}
+
+/* Affiliation logo dimensions */
+img.affiliation-logo {
+    height: 32px !important;
+    width: 32px !important;
+    padding-left: 2px !important;
+    border-radius: var(--ios-radius-sm) !important;
+}
+
+/* Banner dimensions */
+.banner {
+    max-width: 98% !important;
+    max-height: 12ex !important;
+    height: auto !important;
+    display: block !important;
+    margin-bottom: 2rem !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    border-radius: var(--ios-radius-lg) !important;
+}
+
+/* Problem stats - maintain dimensions */
+.problem-stats-item {
+    display: inline-block !important;
+    margin-right: 3px !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 2px !important;
+    box-shadow: inset 0 0 0 1px rgba(27, 31, 35, .04) !important;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--glass-bg-secondary);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, var(--ios-accent), #4d9eff);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #0051d2, var(--ios-accent));
+}
+
+/* Selection styling */
+::selection {
+    background: rgba(0, 122, 255, 0.2);
+    color: var(--ios-text-primary);
+}
+
+::-moz-selection {
+    background: rgba(0, 122, 255, 0.2);
+    color: var(--ios-text-primary);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container, .container-fluid {
+        border-radius: var(--ios-radius-lg) !important;
+        padding: 1rem !important;
+    }
+    
+    .card {
+        border-radius: var(--ios-radius) !important;
+    }
+    
+    .btn {
+        font-size: 0.875rem !important;
+        padding: 0.4rem 0.8rem !important;
+    }
+}
+
+/* Preserve all original layout constraints and behaviors */
+.frozen { font-style: italic !important; }
+.unseen { font-weight: bold !important; }
+.nodata {
+    color: var(--ios-text-secondary) !important;
+    font-style: italic !important;
+}
+.prevsubmit { color: var(--ios-text-secondary) !important; }
+.judgetime { 
+    font-size: smaller !important; 
+    font-style: italic !important; 
+}
+.testcases_prev { font-size: xx-small !important; }
+
+/* Team picture */
+.teampicture {
+    width: 100% !important;
+    border: 1px solid var(--glass-border) !important;
+    border-radius: var(--ios-radius) !important;
+}
+
+/* Maintain all disabled styling */
+.disabled, .dropdown-disabled, .disabled td {
+    color: var(--ios-text-secondary) !important;
+    opacity: 0.6 !important;
+}
+
+/* Ajax loader animation preserved */
+.ajax-loader {
+    -webkit-animation: spin 4s linear infinite !important;
+    -moz-animation: spin 4s linear infinite !important;
+    animation: spin 4s linear infinite !important;
+}
+
+@-moz-keyframes spin {
+    100% { -moz-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes spin {
+    100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+    100% {
+        -webkit-transform: rotate(360deg);
+        transform: rotate(360deg);
+    }
+}
+
+/* from runsha */
+
+body:not(.static) .container-fluid:not(.navbar) {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+}
+
+.nav-pills .nav-link.active,
+.nav-tabs .nav-link.active,
+.nav-link.active {
+    background-color: var(--ios-accent) !important;
+    color: white !important;
+}
