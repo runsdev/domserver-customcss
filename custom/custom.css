@@ -900,10 +900,14 @@ body:not(.static) .container-fluid:not(.navbar) {
 }
 
 .nav-pills .nav-link.active,
-.nav-tabs .nav-link.active,
-.nav-link.active {
+.nav-tabs .nav-link.active {
   background-color: var(--ios-accent) !important;
   color: white !important;
+}
+
+.navbar-nav .nav-link.active {
+  color: var(--ios-accent) !important;
+  font-weight: 600 !important;
 }
 
 /* Use Geist Mono for the source code editor */
@@ -923,4 +927,27 @@ body:not(.static) .container-fluid:not(.navbar) {
   -webkit-backdrop-filter: var(--glass-blur-sm) !important;
   box-shadow: var(--glass-shadow-sm) !important;
   transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+#timeleft {
+  font-weight: 600 !important;
+  color: var(--ios-text-primary) !important;
+}
+
+nav.navbar.navbar-expand-md {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.teamoverview {
+  border-top: 1px solid var(--glass-border) !important;
+  border-bottom: 1px solid var(--glass-border) !important;
+  background: var(--glass-bg-secondary) !important;
+  margin-top: 2ex !important;
+  padding: 1ex !important;
+  font-size: 1.17em !important;
+  text-align: center !important;
+  border-radius: var(--ios-radius-lg) !important;
+  box-shadow: var(--glass-shadow-sm) !important;
+  color: var(--ios-text-primary) !important;
 }
