@@ -953,3 +953,16 @@ nav.navbar.navbar-expand-md {
   box-shadow: var(--glass-shadow-sm) !important;
   color: var(--ios-text-primary) !important;
 }
+
+
+.scoreboard tr.gold-medal {
+  background-color: #EEC710 !important;
+}
+
+.scoreboard tr.silver-medal {
+  background-color: #AAA !important;
+}
+
+.scoreboard tr.bronze-medal {
+  background-color: #C08E55   !important;
+}
