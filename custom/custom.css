@@ -301,6 +301,8 @@ table th {
   top: 0 !important;
   z-index: 1 !important;
   box-shadow: -1px 0 0 0 var(--glass-border) inset, 0 2px 0 0 var(--ios-accent) !important;
+  padding-left: 1.25em !important;
+  padding-right: 1.25em !important;
 }
 
 /* Score colors with iOS style */
