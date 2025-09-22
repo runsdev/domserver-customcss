@@ -464,7 +464,6 @@ table th {
 input,
 textarea,
 select {
-  background: rgba(255, 255, 255, 0.9) !important;
   backdrop-filter: var(--glass-blur-sm) !important;
   -webkit-backdrop-filter: var(--glass-blur-sm) !important;
   border: 1px solid var(--ios-border-medium) !important;
@@ -478,7 +477,6 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-  background: rgba(255, 255, 255, 1) !important;
   border-color: var(--ios-accent) !important;
   box-shadow: 0 0 0 3px rgba(0, 122, 255, 0.1) !important;
   outline: none !important;
