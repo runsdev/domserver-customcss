@@ -762,7 +762,7 @@ img.affiliation-logo {
 /* Banner dimensions */
 .banner {
   max-width: 98% !important;
-  max-height: 12ex !important;
+  max-height: 100% !important;
   height: auto !important;
   display: block !important;
   margin-bottom: 2rem !important;
