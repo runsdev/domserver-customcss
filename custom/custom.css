@@ -968,3 +968,8 @@ nav.navbar.navbar-expand-md {
 .progress, .progress-stacked {
   border-radius: 0 !important;
 }
+
+.navbar-toggler {
+  color: #000 !important;
+  border: var(--bs-border-width) solid #000 !important;
+}
