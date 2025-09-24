@@ -895,8 +895,8 @@ img.affiliation-logo {
 /* from runsha */
 
 body:not(.static) .container-fluid:not(.navbar) {
-  padding-top: 1rem !important;
-  padding-bottom: 1rem !important;
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
 }
 
 .nav-pills .nav-link.active,
@@ -963,4 +963,8 @@ nav.navbar.navbar-expand-md {
 
 .scoreboard tr.bronze-medal {
   background-color: #C08E55   !important;
+}
+
+.progress, .progress-stacked {
+  border-radius: 0 !important;
 }
